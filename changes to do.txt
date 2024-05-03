@@ -1,0 +1,32 @@
+
+icon		https://developer.android.com/codelabs/basic-android-kotlin-compose-training-change-app-icon#0
+
+
+1 get username and email id of user
+3 varify email id
+4 check internet connection
+
+
+https://account.box.com/login/reset?redirect_url=%2Fdevelopers%2Fconsole%2Fapp%2F2228430%2Fconfiguration
+
+https://developer.box.com/guides/authentication/oauth2/
+
+https://www.youtube.com/watch?v=k46HUp8dA1A
+https://www.youtube.com/watch?v=dU8POrWstPc
+https://www.youtube.com/watch?v=j3hdVJ9aCWs
+https://www.youtube.com/watch?v=wc4p6sYR3B4
+https://www.youtube.com/watch?v=50KfWKcwlAs
+https://www.youtube.com/watch?v=1sfWDrigL0s
+https://www.youtube.com/watch?v=aEILZ_tukLg
+
+https://www.postman.com/api-evangelist/workspace/box/overview
+
+https://developer.box.com/guides/tooling/postman/quick-start/
+
+https://developer.box.com/guides/tooling/postman/
+
+https://github.com/box/box-android-sdk/tree/master/box-content-sample
+https://github.com/box/box-android-sdk?tab=readme-ov-file
+https://github.com/box/box-java-sdk/blob/main/doc/android.md
+
+https://www.google.com/search?q=Box+Postman+Collection&rlz=1C1ONGR_en-GBIN1104IN1105&oq=Box+Postman+Collection&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzU3MmowajGoAgCwAgE&sourceid=chrome&ie=UTF-8

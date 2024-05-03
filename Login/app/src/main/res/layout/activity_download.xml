@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".download"
+    android:background="@color/teal_700">
+
+    <ImageView
+        android:id="@+id/filePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        />
+
+    <Button
+        android:id="@+id/downloadbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download selected file"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30sp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

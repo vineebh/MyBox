@@ -1,4 +1,5 @@
 package com.example.login;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 uploadToBox();
             }
-
-            CreateFolderInBox box =new CreateFolderInBox();
         });
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,18 +51,19 @@ public class MainActivity extends AppCompatActivity {
                 uploadToBox();
             }
         });
-
-//        startActivity(new Intent(MainActivity.this, MainActivity1.class));
+        CreateFolderInBox box =new CreateFolderInBox();
     }
 
     private void downloadFromBox() {
         // Placeholder for download from Box logic
-        Toast.makeText(this, "Downloading...", Toast.LENGTH_SHORT).show();
+        Intent i=new Intent(MainActivity.this,downloadFile.class);
+        i.putExtra("path", "null");
+        startActivity(i);
     }
 
     private void uploadToBox() {
         // Placeholder for upload to Box logic
-        Toast.makeText(this, "Uploading...", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent( MainActivity.this, uploadFile.class));
     }
 
 }

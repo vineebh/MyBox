@@ -63,29 +63,33 @@ public class LoginActivity extends AppCompatActivity {
                 String email = loginEmail.getText().toString();
                 String pass = loginPassword.getText().toString();
 
-                if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    if (!pass.isEmpty()) {
-                        auth.signInWithEmailAndPassword(email, pass)
-                                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                                    @Override
-                                    public void onSuccess(AuthResult authResult) {
-                                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                        finish();
-                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
+                try {
+                    if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                        if (!pass.isEmpty()) {
+                            auth.signInWithEmailAndPassword(email, pass)
+                                    .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                        @Override
+                                        public void onSuccess(AuthResult authResult) {
+                                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                            finish();
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                        } else {
+                            loginPassword.setError("Empty fields are not allowed");
+                        }
+                    } else if (email.isEmpty()) {
+                        loginEmail.setError("Empty fields are not allowed");
                     } else {
-                        loginPassword.setError("Empty fields are not allowed");
+                        loginEmail.setError("Please enter correct email");
                     }
-                } else if (email.isEmpty()) {
-                    loginEmail.setError("Empty fields are not allowed");
-                } else {
-                    loginEmail.setError("Please enter correct email");
+                }catch (Exception e){
+                    Toast.makeText(LoginActivity.this,"Check your Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
